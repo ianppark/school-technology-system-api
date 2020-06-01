@@ -1,0 +1,29 @@
+{
+  "name": "school-technology-system-api",
+  "version": "0.1.0",
+  "description": "Mongo Express Node Backend API for the School Technology System application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianppark/school-technology-system-api.git"
+  },
+  "keywords": [
+    "MongoDB",
+    "School",
+    "Database"
+  ],
+  "author": "Ian Parker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ianppark/school-technology-system-api/issues"
+  },
+  "homepage": "https://github.com/ianppark/school-technology-system-api#readme",
+  "dependencies": {
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.16"
+  }
+}
