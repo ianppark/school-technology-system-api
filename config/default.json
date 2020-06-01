@@ -1,0 +1,4 @@
+{
+  "env": "development",
+  "mongoURI": "mongodb+srv://admin:NrYnJApnVoCvAZen@sts-development-jvhjf.mongodb.net/dev?retryWrites=true&w=majority"
+}
