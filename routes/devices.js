@@ -5,6 +5,8 @@ const {
   createDevice,
   updateDevice,
   deleteDevice,
+  checkoutDevice,
+  checkinDevice,
 } = require('../controllers/devices');
 const advancedResults = require('../middleware/advancedResults');
 const Device = require('../Models/Device');
@@ -30,5 +32,9 @@ router
   .get(protect, getDevice)
   .put(protect, updateDevice)
   .delete(protect, deleteDevice);
+
+router.route('/:id/checkout').post(protect, checkoutDevice);
+
+router.route('/:id/checkin').put(protect, checkinDevice);
 
 module.exports = router;
