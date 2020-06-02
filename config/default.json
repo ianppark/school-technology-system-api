@@ -1,4 +1,6 @@
 {
   "env": "development",
-  "mongoURI": "mongodb+srv://admin:NrYnJApnVoCvAZen@sts-development-jvhjf.mongodb.net/dev?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://admin:NrYnJApnVoCvAZen@sts-development-jvhjf.mongodb.net/dev?retryWrites=true&w=majority",
+  "jwtSecret": "mvemJSUNp",
+  "jwtExpireTime": "30d"
 }

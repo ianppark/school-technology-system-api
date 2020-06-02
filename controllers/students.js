@@ -13,7 +13,7 @@ exports.getStudents = asyncHandler(async (req, res, next) => {
 // @route   GET /api/v1/students/:id
 // access   Private
 exports.getStudent = asyncHandler(async (req, res, next) => {
-  const student = await Student.findById(req.params.id);
+  const student = await Student.findById(req.params.id).populate('devices');
 
   if (!student) {
     return next(

@@ -18,6 +18,7 @@ connectDB();
 // Load Route Files
 const students = require('./routes/students');
 const devices = require('./routes/devices');
+const auth = require('./routes/auth');
 
 // Init Middleware
 app.use(express.json({ extended: false }));
@@ -29,6 +30,7 @@ if (isDev) {
 // Mount Routers
 app.use('/api/v1/students', students);
 app.use('/api/v1/devices', devices);
+app.use('/api/v1/auth', auth);
 
 // Error Handler
 app.use(errorHandler);

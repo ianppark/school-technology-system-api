@@ -9,6 +9,8 @@ const {
 const advancedResults = require('../middleware/advancedResults');
 const Device = require('../Models/Device');
 
+const { protect } = require('../middleware/auth');
+
 const router = express.Router({ mergeParams: true });
 
 router
@@ -18,10 +20,15 @@ router
       path: 'student',
       select: 'firstName lastName grade',
     }),
+    protect,
     getDevices
   )
-  .post(createDevice);
+  .post(protect, createDevice);
 
-router.route('/:id').get(getDevice).put(updateDevice).delete(deleteDevice);
+router
+  .route('/:id')
+  .get(protect, getDevice)
+  .put(protect, updateDevice)
+  .delete(protect, deleteDevice);
 
 module.exports = router;
